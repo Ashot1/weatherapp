@@ -10,11 +10,7 @@ const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 export const metadata: Metadata = {
   title: 'Weather',
   description: description,
-  icons: {
-    icon: '/icon-weather.png',
-    apple: '/icon-weather.png',
-  },
-  themeColor: [{color: '#18191d', media: '(prefers-color-scheme: dark)'}, {color: 'rgb(214, 219, 220)', media: '(prefers-color-scheme: dark)'}],
+  themeColor: [{color: '#18191d', media: '(prefers-color-scheme: dark)'}, {color: 'rgb(214, 219, 220)', media: '(prefers-color-scheme: light)'}],
   manifest: '/manifest/manifest.json',
 }
 

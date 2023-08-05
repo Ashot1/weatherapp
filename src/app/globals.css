@@ -95,9 +95,12 @@ body {
     animation: BackgroundAnimation 2s ease-out;
     /*background-color: #e499ff;*/
     background-image: radial-gradient(at 40% 50%, hsla(17,62%,65%,1) 0px, transparent 40%), radial-gradient(at 60% 50%, hsla(222,75%,60%,1) 0px, transparent 40%);
-    @media (max-width: 600px) {
-      background-image: radial-gradient(at 10% 50%, hsla(17,62%,65%,1) 30%, transparent 40%), radial-gradient(at 80% 50%, hsla(222,75%,60%,1) 30%, transparent 40%);
-    }
+  }
+}
+
+@media (max-width: 600px) {
+  body::before{
+      background-image: radial-gradient(at 10% 50%, hsla(17,62%,65%,1) 0px, transparent 60%), radial-gradient(at 80% 50%, hsla(222,75%,60%,1) 0px, transparent 60%);
   }
 }
 /*rgb(72, 175, 251)*/

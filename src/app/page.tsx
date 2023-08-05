@@ -8,7 +8,7 @@ export default function Home() {
   return (
       <div className="flex h-[100dvh] flex-col items-center justify-center gap-5 animatedTextFirstPage">
           <h1 className={`${megrim.className} text-2xl 300p:text-3xl 1024p:text-3xl 4k:text-7xl`}>{name}</h1>
-          <p className={`${comfortaa.className} text-xs text-center 768p:text-sm 1024p:text-sm 4k:text-3xl`}>{description}</p>
+          <p className={`${comfortaa.className} text-xs text-center 768p:text-sm 1024p:text-sm 4k:text-3xl px-1`}>{description}</p>
       </div>
   )
 }
