@@ -10,9 +10,12 @@ const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 export const metadata: Metadata = {
   title: 'Weather',
   description: description,
-  icons: '/icon-weather.png',
+  icons: {
+    icon: '/icon-weather.png',
+    apple: '/icon-weather.png',
+  },
   themeColor: [{color: '#18191d', media: '(prefers-color-scheme: dark)'}, {color: 'rgb(214, 219, 220)', media: '(prefers-color-scheme: dark)'}],
-  manifest: '/manifest.json',
+  manifest: '/manifest/manifest.json',
 }
 
 export default function RootLayout({
