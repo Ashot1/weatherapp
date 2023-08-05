@@ -4,6 +4,14 @@
  
 @layer base {
   :root {
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    --background-color: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(255, 255, 255)
+    )
+    rgb(214, 219, 220);
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
  
@@ -37,6 +45,7 @@
   }
  
   .dark {
+    --background-color: #18191d;
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
  
@@ -78,48 +87,35 @@
 }
 
 body {
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(255, 255, 255)
-    )
-    rgb(214, 219, 220);
+  background: var(--background-color);
   &::before{
     content: "";
     position: absolute;
     width: 100dvw;
     height: 100dvh;
-    filter: blur(100px);
+    filter: blur(120px);
     z-index: -1;
     border-radius: 50%;
-    animation: BackgroundAnimation 2s ease-out;
-    /*background-color: #e499ff;*/
+    animation: BackgroundAnimation 4s ease-out;
     background-image: radial-gradient(at 40% 50%, hsla(17,62%,65%,1) 0px, transparent 40%), radial-gradient(at 60% 50%, hsla(222,75%,60%,1) 0px, transparent 40%);
   }
 }
 
-@media (max-width: 600px) {
-  body::before{
-      background-image: radial-gradient(at 10% 50%, hsla(17,62%,65%,1) 0px, transparent 60%), radial-gradient(at 80% 50%, hsla(222,75%,60%,1) 0px, transparent 60%);
-  }
-}
 /*rgb(72, 175, 251)*/
 /*hsla(222,75%,60%,1)*/
 
-.dark body{
-  background: #18191d;
-  color: #fff
+@media (max-width: 600px) {
+  body::before{
+      background-image: radial-gradient(at 10% 50%, hsla(17,62%,65%,1) 30%, transparent 60%), radial-gradient(at 80% 50%, hsla(222,75%,60%,1) 40%, transparent 60%);
+  }
+  .dark body::before{
+      background-image: radial-gradient(at 10% 50%, hsla(17,62%,65%,1) 0px, transparent 60%), radial-gradient(at 80% 50%, hsla(222,75%,60%,1) 0px, transparent 60%);
+  }
 }
 
 .centerContent {
   display: grid;
   place-items: center;
-}
-
-.animatedTextFirstPage{
-  & h1{
-    text-shadow: 0 0 10px white;
-  }
 }
 
 @keyframes BackgroundAnimation {
@@ -129,4 +125,8 @@ body {
   to {
     opacity: 1
   }
+}
+
+.dark .textGlowEffect{
+  text-shadow: 0 0 10px;
 }

@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      transitionDelay: {
+        '2000': '2000ms',
+      },
       screens: {
         '300p': '320px',
         '500p': '500px',
@@ -74,10 +77,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "appearance-kf": {
+          from: {opacity: 0},
+          to: {opacity: 1},
+        },
+        "top-appearance-moving-kf": {
+          from: {translate: '0 -50px', opacity: 0},
+          to: {translate: '0 0', opacity: 1}
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "text-appearance": "appearance-kf 1.5s ease-out",
+        "top-appearance-moving": "top-appearance-moving-kf 1s ease-out",
       },
     },
   },

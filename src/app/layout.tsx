@@ -1,11 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import ThemeProvider from '@/hoc/ThemeProvider'
 import {description} from '@/../package.json'
+import { inter } from '@/lib/fonts'
 
-const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
 export const metadata: Metadata = {
   title: 'Weather',
