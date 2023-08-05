@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 import ThemeProvider from '@/hoc/ThemeProvider'
 import {description} from '@/../package.json'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
 export const metadata: Metadata = {
   title: 'Weather',

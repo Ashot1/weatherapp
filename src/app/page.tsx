@@ -1,8 +1,8 @@
 import { Megrim, Comfortaa } from 'next/font/google'
 import {description, name} from '@/../package.json'
 
-const megrim = Megrim({weight: '400'})
-const comfortaa = Comfortaa({weight: '300'})
+const megrim = Megrim({weight: '400', subsets: ['latin']})
+const comfortaa = Comfortaa({weight: '300', subsets: ['latin', 'cyrillic']})
 
 export default function Home() {
   return (
