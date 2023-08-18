@@ -1,6 +1,5 @@
 import CityCommandMenu from '@/components/entity/CityCommandMenu'
-import CustomHeader from '@/components/module/CustomHeader'
-import HeaderTitle from '@/components/ui/HeaderTitle'
+import CustomHeader, { HeaderTitle } from '@/components/module/CustomHeader'
 
 export default function Weather() {
 	return (
@@ -9,7 +8,7 @@ export default function Weather() {
 				<HeaderTitle>Weather</HeaderTitle>
 			</CustomHeader>
 			<div className="flex-1 centerContent animate-top-appearance-moving">
-				<CityCommandMenu classWrapper="w-[90%] 500p:w-[50%] max-w-[650px]"/>
+				<CityCommandMenu classWrapper="w-[90%] 768p:w-[50%] max-w-[650px]"/>
 			</div>
 		</div>
 	)

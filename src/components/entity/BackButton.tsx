@@ -7,9 +7,11 @@ import { useRouter } from 'next/navigation'
 
 const BackButton: FC = () => {
 	const navigate = useRouter()
+
 	return (
-		<Button variant="ghost" size="icon" onClick={() => navigate.back()} className="rounded-full">
+		<Button variant="ghost" onClick={() => navigate.back()} className="rounded-full 768p:pl-2">
 			<ChevronRightIcon className="w-6 h-6 rotate-180 4k:w-10 4k:h-10"/>
+			<span className="hidden 768p:block">Назад</span>
 		</Button>
 	)
 }

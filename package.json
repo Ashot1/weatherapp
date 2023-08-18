@@ -1,7 +1,7 @@
 {
   "name": "weather",
   "description": "Сервис для просмотра актуальных прогнозов погоды",
-  "version": "0.2",
+  "version": "0.3",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -26,6 +26,7 @@
     "cmdk": "^0.2.0",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "framer-motion": "^10.15.0",
     "next": "13.4.12",
     "next-themes": "^0.2.1",
     "postcss": "8.4.27",

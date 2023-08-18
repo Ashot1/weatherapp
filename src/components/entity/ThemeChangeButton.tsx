@@ -15,7 +15,7 @@ const ThemeChangeButton: FC = () => {
 	return (
 		<Dialog>
 			<DialogTrigger>Изменить тему</DialogTrigger>
-			<DialogContent className="max-[550px]:w-[90%]">
+			<DialogContent className="max-[550px]:w-[90%] rounded-2xl">
 				<DialogTitle className="text-sm 768p:text-base 4k:text-xl">Выберите тему</DialogTitle>
 				<DialogDescription className="flex flex-col gap-3 mt-3">
 					<Button onClick={ChangeTheme} value="light" variant="link" className="w-[100%] justify-start text-xs 768p:text-sm 4k:text-lg"><SunIcon className="mr-5 4k:w-6 4k:h-6"/>Светлая</Button>

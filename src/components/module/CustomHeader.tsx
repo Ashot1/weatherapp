@@ -1,17 +1,18 @@
 import { FC, ReactNode } from 'react'
 import BackButton from '@/components/entity/BackButton'
-import MenuButton from '@/components/entity/MenuButton'
+import MenuButton from '@/components/widgets/MenuButton'
+import { comfortaa600 } from '@/lib/fonts'
 
 const CustomHeader: FC<{children?: ReactNode, title?: string}> = ({children, title}) => {
 
 	return (
-		<header className=" w-screen h-[60px] flex justify-center relative">
-			<div className="max-w-[750px] w-[90%] 768p:w-[70%] flex h-[100%] items-center">
-				<nav className="w-10 -mt-[2px] justify-center flex items-center">
+		<header className="w-screen h-[60px] flex justify-center relative">
+			<div className="max-w-[1100px] w-[90%] 768p:w-[70%] flex h-[100%] items-center">
+				<nav className="w-[20%] -mt-[2px] justify-center flex items-center">
 					<BackButton/>
 				</nav>
 				{children}
-				<span className="w-10 justify-center flex items-center">
+				<span className="w-[20%] justify-center flex items-center">
 					<MenuButton/>
 				</span>
 			</div>
@@ -20,3 +21,10 @@ const CustomHeader: FC<{children?: ReactNode, title?: string}> = ({children, tit
 }
 
 export default CustomHeader
+
+
+export const HeaderTitle: FC<{children: string}> = ({children}) => {
+	return (
+		<h1 className={`${comfortaa600.className} flex-1 text-center h-auto text-lg 4k:text-xl`}>{children}</h1>
+	)
+}

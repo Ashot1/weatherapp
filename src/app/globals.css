@@ -1,132 +1,134 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
-  :root {
-    touch-action: none;
-    -webkit-tap-highlight-color: transparent;
-    --background-color: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(255, 255, 255)
-    )
-    rgb(214, 219, 220);
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
- 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
- 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
- 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
- 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
- 
-    --ring: 215 20.2% 65.1%;
- 
-    --radius: 0.5rem;
-  }
- 
-  .dark {
-    --background-color: #18191d;
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
- 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
- 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
- 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
- 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
- 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
- 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
- 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
- 
-    --ring: 217.2 32.6% 17.5%;
-  }
+    :root {
+        -webkit-tap-highlight-color: transparent;
+        --background-color: linear-gradient(
+                to bottom,
+                transparent,
+                rgb(255, 255, 255)
+        ) rgb(214, 219, 220);
+        --background: 0 0% 100% / 0.9;
+        --foreground: 222.2 84% 4.9%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --popover: 0 0% 100% / 0.6;
+        --popover-foreground: 222.2 84% 4.9%;
+
+        --card: 0 0% 100% / 0.7;
+        --card-foreground: 222.2 84% 4.9%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --accent: 0 0% 0% / 0.07;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 215 20.2% 65.1%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background-color: #18191d;
+        --background: 0 0% 0% / 0.7;
+        --foreground: 210 40% 98%;
+
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+
+        --popover: 0 0% 0% / 0.6;
+        --popover-foreground: 210 40% 98%;
+
+        --card: 0 0% 0% / 0.7;
+        --card-foreground: 210 40% 98%;
+
+        --border: 0, 0%, 12%;
+        --input: 217.2 32.6% 17.5%;
+
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 11.2%;
+
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+
+        --accent: 255 100% 100% / 0.1;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 85.7% 97.3%;
+
+        --ring: 217.2 32.6% 17.5%;
+    }
 }
- 
+
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
 }
 
 body {
-  background: var(--background-color);
-  &::before{
-    content: "";
-    position: absolute;
-    width: 100dvw;
-    height: 100dvh;
-    filter: blur(120px);
-    z-index: -1;
-    border-radius: 50%;
-    animation: BackgroundAnimation 4s ease-out;
-    background-image: radial-gradient(at 40% 50%, hsla(17,62%,65%,1) 0px, transparent 40%), radial-gradient(at 60% 50%, hsla(222,75%,60%,1) 0px, transparent 40%);
-  }
+    background: var(--background-color);
+    overflow-x: hidden;
+
+    &::before {
+        content: "";
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+        filter: blur(120px);
+        z-index: -1;
+        border-radius: 50%;
+        animation: BackgroundAnimation 4s ease-out;
+        background-image: radial-gradient(at 40% 50%, hsla(17, 62%, 65%, 1) 0px, transparent 40%), radial-gradient(at 60% 50%, hsla(222, 75%, 60%, 1) 0px, transparent 40%);
+    }
 }
 
 /*rgb(72, 175, 251)*/
 /*hsla(222,75%,60%,1)*/
 
 @media (max-width: 600px) {
-  body::before{
-      background-image: radial-gradient(at 10% 50%, hsla(17,62%,65%,1) 30%, transparent 60%), radial-gradient(at 80% 50%, hsla(222,75%,60%,1) 40%, transparent 60%);
-  }
-  .dark body::before{
-      background-image: radial-gradient(at 10% 50%, hsla(17,62%,65%,1) 0px, transparent 60%), radial-gradient(at 80% 50%, hsla(222,75%,60%,1) 0px, transparent 60%);
-  }
+    body::before {
+        background-image: radial-gradient(at 10% 50%, hsla(17, 62%, 65%, 1) 30%, transparent 60%), radial-gradient(at 80% 50%, hsla(222, 75%, 60%, 1) 40%, transparent 60%);
+    }
+
+    .dark body::before {
+        background-image: radial-gradient(at 10% 50%, hsla(17, 62%, 65%, 1) 0px, transparent 60%), radial-gradient(at 80% 50%, hsla(222, 75%, 60%, 1) 0px, transparent 60%);
+    }
 }
 
 .centerContent {
-  display: grid;
-  place-items: center;
+    display: grid;
+    place-items: center;
 }
 
 @keyframes BackgroundAnimation {
-  from {
-    opacity: 0
-  }
-  to {
-    opacity: 1
-  }
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
 }
 
-.dark .textGlowEffect{
-  text-shadow: 0 0 10px;
+.dark .textGlowEffect {
+    text-shadow: 0 0 10px;
 }
