@@ -10,7 +10,7 @@ import framerIcon from '../assets/framer-motion.svg'
 import weatherAPIIcon from '../assets/weatherAPI.svg'
 import reactIcon from '../assets/react.svg'
 
-import { Card, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function About() {
 			</CustomHeader>
 			<Card className='mt-20 animate-top-appearance-moving'>
 				<CardHeader>
-					<CardTitle>Версия приложения: {version}</CardTitle>
+					<CardDescription>Версия приложения: {version}</CardDescription>
 				</CardHeader>
 			</Card>
 			<h1
