@@ -3,13 +3,6 @@ import ScrollStateBar from '@/components/ui/ScrollStateBar'
 import InfoCard from '@/components/entity/InfoCard'
 import { version } from '../../../package.json'
 
-import NextIcon from '../assets/next.svg'
-import ShadcnIcon from '../assets/shadcn.png'
-import TailwindIcon from '../assets/tailwindcss.svg'
-import framerIcon from '../assets/framer-motion.svg'
-import weatherAPIIcon from '../assets/weatherAPI.svg'
-import reactIcon from '../assets/react.svg'
-
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Metadata } from 'next'
 
@@ -20,12 +13,12 @@ export const metadata: Metadata = {
 
 export default function About() {
 	const libraries = [
-		{ icon: reactIcon, title: 'React', link: 'https://react.dev/' },
-		{ icon: NextIcon, title: 'Next.js', link: 'https://nextjs.org/' },
-		{ icon: ShadcnIcon, title: 'Shadcn/ui', link: 'https://ui.shadcn.com/' },
-		{ icon: TailwindIcon, title: 'Tailwind CSS', link: 'https://tailwindcss.com/' },
-		{ icon: framerIcon, title: 'Framer Motion', link: 'https://www.framer.com/motion/' },
-		{ icon: weatherAPIIcon, title: 'Weather API', link: 'https://www.weatherapi.com/' }
+		{ icon: '/about/react.svg', title: 'React', link: 'https://react.dev/' },
+		{ icon: '/about/next.svg', title: 'Next.js', link: 'https://nextjs.org/' },
+		{ icon: '/about/shadcn.png', title: 'Shadcn/ui', link: 'https://ui.shadcn.com/' },
+		{ icon: '/about/tailwindcss.svg', title: 'Tailwind CSS', link: 'https://tailwindcss.com/' },
+		{ icon: '/about/framer-motion.svg', title: 'Framer Motion', link: 'https://www.framer.com/motion/' },
+		{ icon: '/about/weatherAPI.svg', title: 'Weather API', link: 'https://www.weatherapi.com/' }
 	]
 
 	return (

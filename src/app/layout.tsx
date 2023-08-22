@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 	title: { default: 'Weather', template: '%s | Weather' },
 	description: description,
 	manifest: '/manifest/manifest.json',
-	themeColor: [{ color: '#18191d', media: '(prefers-color-scheme: dark)' }, { color: 'rgb(214, 219, 220)', media: '(prefers-color-scheme: light)' }]
+	themeColor: [{ color: '#18191d', media: '(prefers-color-scheme: dark)' }, {
+		color: 'rgb(214, 219, 220)',
+		media: '(prefers-color-scheme: light)'
+	}],
+	icons: '/icon-weather.png'
 }
 
 export default function RootLayout({ children }: {

@@ -102,6 +102,59 @@ body {
     }
 }
 
+.orangeEffect {
+    &::before {
+        content: "";
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+        filter: blur(140px);
+        z-index: -1;
+        animation: BackgroundAnimation 4s ease-out;
+        background-image: radial-gradient(at 50% 0%, hsla(17, 62%, 65%, 1) 0px, transparent 45%);
+    }
+}
+
+.blueEffect {
+    &::before {
+        content: "";
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+        filter: blur(160px);
+        z-index: -1;
+        animation: BackgroundAnimation 4s ease-out;
+        background-image: radial-gradient(at 45% 0%, hsla(222, 75%, 60%, 1) 0px, transparent 45%);
+    }
+}
+
+.whiteEffect {
+    &::before {
+        content: "";
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+        filter: blur(160px);
+        z-index: -1;
+        animation: BackgroundAnimation 4s ease-out;
+        background-image: radial-gradient(at 45% 0%, rgb(232, 245, 253) 30px, transparent 80%);
+    }
+}
+
+.dark .whiteEffect {
+    &::before {
+        content: "";
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+        filter: blur(160px);
+        z-index: -1;
+        animation: BackgroundAnimation 4s ease-out;
+        background-image: radial-gradient(at 45% 0%, rgb(232, 245, 253) 10px, transparent 50%);
+    }
+}
+
+
 /*rgb(72, 175, 251)*/
 /*hsla(222,75%,60%,1)*/
 
@@ -112,6 +165,22 @@ body {
 
     .dark body::before {
         background-image: radial-gradient(at 10% 50%, hsla(17, 62%, 65%, 1) 0px, transparent 60%), radial-gradient(at 80% 50%, hsla(222, 75%, 60%, 1) 0px, transparent 60%);
+    }
+
+    .orangeEffect::before {
+        background-image: radial-gradient(at 70% 0%, hsla(17, 62%, 65%, 1) 0px, transparent 70%);
+    }
+
+    .blueEffect::before {
+        background-image: radial-gradient(at 10% 30%, hsla(222, 75%, 60%, 1) 0px, transparent 70%);
+    }
+
+    .whiteEffect::before {
+        background-image: radial-gradient(at 20% 0%, rgb(232, 245, 253) 200px, transparent 200%);
+    }
+
+    .dark .whiteEffect::before {
+        background-image: radial-gradient(at 20% 0%, rgb(232, 245, 253) 50px, transparent 80%);
     }
 }
 

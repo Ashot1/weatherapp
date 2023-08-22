@@ -4,7 +4,7 @@ import CustomHeader, { HeaderTitle } from '@/components/module/CustomHeader'
 export default function Weather() {
 	return (
 		<div className='flex flex-col h-[100dvh]'>
-			<CustomHeader>
+			<CustomHeader backButtonLink='/'>
 				<HeaderTitle>Weather</HeaderTitle>
 			</CustomHeader>
 			<div className='flex-1 centerContent animate-top-appearance-moving'>

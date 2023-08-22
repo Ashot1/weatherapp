@@ -57,7 +57,7 @@ const CityCommandMenu: FC<{ classWrapper?: string }> = ({ classWrapper }) => {
 		<div className={classWrapper}>
 			{Error && <p className='text-red-400'>{Error}</p>}
 			<Command className='shadow-md'>
-				<CommandInput placeholder='Выберите город...' className='text-sm 768p:text-sm 4k:text-lg'
+				<CommandInput placeholder='Введите название города...' className='text-sm 768p:text-sm 4k:text-lg'
 							  onKeyUp={SubmitSearch} value={InputControl}
 							  onInput={(e) => setInputControl((e.target as HTMLInputElement).value)} />
 				<ListCities list={CitiesList} />
@@ -90,7 +90,7 @@ const ListCities: FC<{ list: ListOfCities }> = memo(({ list }) => {
 		<CommandList>
 			{list.map(city => (
 				<CustomCommandItem key={city.url} region={city.region} country={city.country}
-								   url={city.url}>{city.title}</CustomCommandItem>))}
+								   url={`${city.url}/current`}>{city.title}</CustomCommandItem>))}
 		</CommandList>
 	)
 })
