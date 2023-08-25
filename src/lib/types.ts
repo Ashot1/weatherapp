@@ -1,3 +1,13 @@
+export interface SearchData {
+	id: number,
+	name: string,
+	region: string,
+	country: string,
+	lat: number,
+	lon: number,
+	url: string
+}
+
 export interface WeatherData {
 	location: TLocation,
 	current: Current,
@@ -113,3 +123,4 @@ type ForecastDay = {
 	};
 	hour: Hour[];
 };
+

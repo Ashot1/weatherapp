@@ -18,10 +18,21 @@ const getWeather = async (city: string) => {
 
 export async function generateMetadata({ params }: { params: { city: string[] } }): Promise<Metadata> {
 	const city = await getWeather(params.city[0])
+	const date = params.city[1] === 'current' ? 'сегодня' : params.city[1]
 
 	if (city?.location?.name) return {
 		title: city.location.name,
-		icons: city.current.condition.icon
+		icons: city.current.condition.icon,
+		openGraph: {
+			title: `${city.location.name} | Weather`,
+			description: `Актуальная погода на ${date}`,
+			images: '/icon-weather.png'
+		},
+		twitter: {
+			title: `${city.location.name} | Weather`,
+			description: `Актуальная погода на ${date}`,
+			images: '/icon-weather.png'
+		}
 	}
 	return {}
 }

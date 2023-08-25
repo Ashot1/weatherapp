@@ -1,4 +1,4 @@
-import CityCommandMenu from '@/components/entity/CityCommandMenu'
+import CityCommandMenu from '@/components/widgets/CityCommandMenu'
 import CustomHeader, { HeaderTitle } from '@/components/module/CustomHeader'
 
 export default function Weather() {

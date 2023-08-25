@@ -5,6 +5,7 @@ import { version } from '../../../package.json'
 
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Metadata } from 'next'
+import Loader from '@/components/ui/Loader'
 
 export const metadata: Metadata = {
 	title: 'Информация',
@@ -22,11 +23,8 @@ export default function About() {
 	]
 
 	return (
-		<div className='min-h-[100vh] flex flex-col items-center pb-20'>
+		<>
 			{<ScrollStateBar />}
-			<CustomHeader>
-				<HeaderTitle>Weather</HeaderTitle>
-			</CustomHeader>
 			<Card className='mt-20 animate-top-appearance-moving'>
 				<CardHeader>
 					<CardDescription>Версия приложения: {version}</CardDescription>
@@ -49,6 +47,6 @@ export default function About() {
 					))
 				}
 			</ul>
-		</div>
+		</>
 	)
 }

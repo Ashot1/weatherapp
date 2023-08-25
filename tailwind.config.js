@@ -88,6 +88,20 @@ module.exports = {
 				'blur-effect-kf': {
 					from: { filter: 'blur(15px)', opacity: 0.4 },
 					to: { filter: 'blur(0)', opacity: 1 }
+				},
+				'sunshine-effect-kf': {
+					from: { scale: '1', opacity: 0.6 },
+					to: { scale: '1.6', opacity: 0 }
+				},
+				'left-cloud-effect-kf': {
+					'0%': { translate: '-10px' },
+					'50%': { translate: '0' },
+					'100%': { translate: '-10px' }
+				},
+				'right-cloud-effect-kf': {
+					'0%': { translate: '10px' },
+					'50%': { translate: '0' },
+					'100%': { translate: '10px' }
 				}
 			},
 			animation: {
@@ -95,7 +109,10 @@ module.exports = {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'text-appearance': 'appearance-kf 1.5s ease-out',
 				'top-appearance-moving': 'top-appearance-moving-kf 1s ease-out',
-				'blur-animation': 'blur-effect-kf 0.8s ease-out'
+				'blur-animation': 'blur-effect-kf 0.8s ease-out',
+				'sunshine-effect': 'sunshine-effect-kf 2s infinite',
+				'left-cloud-effect': 'left-cloud-effect-kf 6s infinite',
+				'right-cloud-effect': 'right-cloud-effect-kf 10s infinite'
 			}
 		}
 	},

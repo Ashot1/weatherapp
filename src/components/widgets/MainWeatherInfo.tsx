@@ -39,14 +39,16 @@ const MainWeatherInfo: FC<{ img: string, temp: number, weatherName: string, isDa
 
 	return (
 		<div className={`${bgCondition} animate-blur-animation`}>
-			<section className='w-screen flex items-center justify-center mt-5 gap-[10%]'>
-				<span>
-					<Image src={url} alt={weatherName} width={90} height={90} className='drop-shadow-lg' />
-				</span>
-				<span className='text-center box-border '>
+			<section className='w-screen mt-5 grid place-items-center'>
+				<div className='grid grid-cols-2 w-[90%] 500p:w-[70%] 768p:w-[50%] 1024p:w-[30%] items-center'>
+					<span className='grid place-items-center'>
+						<Image src={url} alt={weatherName} width={90} height={90} className='drop-shadow-lg' />
+					</span>
+					<span className='text-center box-border max-w-600px'>
 					<h1 className={`text-5xl ${bellota400.className}`}>{temp}°</h1>
-					<p className={'opacity-80 text-sm -ml-5'}>{weatherName}</p>
+					<p className={'opacity-80 text-sm -ml-5 text-wrap-balance'}>{weatherName}</p>
 				</span>
+				</div>
 			</section>
 		</div>
 	)

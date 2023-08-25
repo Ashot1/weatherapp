@@ -201,3 +201,7 @@ body {
 .dark .textGlowEffect {
     text-shadow: 0 0 10px;
 }
+
+.text-wrap-balance {
+    text-wrap: balance;
+}

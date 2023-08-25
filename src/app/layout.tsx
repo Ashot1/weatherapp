@@ -6,14 +6,30 @@ import { description } from '@/../package.json'
 import { inter } from '@/lib/fonts'
 
 export const metadata: Metadata = {
-	title: { default: 'Weather', template: '%s | Weather' },
+	title: {
+		default: 'Weather',
+		template: '%s | Weather'
+	},
 	description: description,
 	manifest: '/manifest/manifest.json',
 	themeColor: [{ color: '#18191d', media: '(prefers-color-scheme: dark)' }, {
 		color: 'rgb(214, 219, 220)',
 		media: '(prefers-color-scheme: light)'
 	}],
-	icons: '/icon-weather.png'
+	icons: '/icon-weather.png',
+	colorScheme: 'light dark',
+	keywords: ['Weather', 'Погода', 'Прогнозы'],
+	openGraph: {
+		title: 'Weather',
+		description: description,
+		images: '/icon-weather.png',
+		locale: 'ru-RU'
+	},
+	twitter: {
+		title: 'Weather',
+		description: description,
+		images: '/icon-weather.png'
+	}
 }
 
 export default function RootLayout({ children }: {

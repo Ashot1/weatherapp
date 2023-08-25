@@ -2,14 +2,15 @@ import { Inter, Megrim, Comfortaa, Rajdhani, Tilt_Prism, Bellota } from 'next/fo
 
 export const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
-export const megrim400 = Megrim({ weight: '400', subsets: ['latin'] })
-export const comfortaa300 = Comfortaa({ weight: '300', subsets: ['latin', 'cyrillic'] })
+export const megrim400 = Megrim({ weight: '400', subsets: ['latin'], preload: true })
 
-export const comfortaa600 = Comfortaa({ weight: '600', subsets: ['latin', 'cyrillic'] })
+export const comfortaa300 = Comfortaa({ weight: '300', subsets: ['latin', 'cyrillic'], preload: true })
 
-export const rajdhani600 = Rajdhani({ weight: '600', subsets: ['latin'] })
+export const comfortaa600 = Comfortaa({ weight: '600', subsets: ['latin', 'cyrillic'], preload: true })
 
-export const tiltPrism400 = Tilt_Prism({ weight: '400', subsets: ['latin'] })
+export const rajdhani600 = Rajdhani({ weight: '600', subsets: ['latin'], preload: true })
 
-export const bellota400 = Bellota({ weight: '400', subsets: ['latin', 'cyrillic'] })
+export const tiltPrism400 = Tilt_Prism({ weight: '400', subsets: ['latin'], preload: true })
+
+export const bellota400 = Bellota({ weight: '400', subsets: ['latin', 'cyrillic'], preload: true })
 

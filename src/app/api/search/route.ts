@@ -1,5 +1,6 @@
 import { Request } from 'next/dist/compiled/@edge-runtime/primitives'
 import { NextResponse } from 'next/server'
+import { SearchData } from '@/lib/types'
 
 type TSearchResult = {
 	country: string,
