@@ -2,13 +2,14 @@ import CustomHeader, { HeaderTitle } from '@/components/module/CustomHeader'
 import { Metadata } from 'next'
 import DayWeatherInfo from '@/components/module/DayWeatherInfo'
 import { WeatherData } from '@/lib/types'
-
+import UpdateButton from '@/components/entity/UpdateButton'
+import { revalidateTag } from 'next/cache'
 
 const getWeather = async (city: string) => {
 	const apiKey = process.env.WEATHER_API_KEY
 
 	const result: WeatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=yes&alerts=no&lang=ru`, {
-		next: { revalidate: 900 }
+		next: { revalidate: 1800, tags: ['CityWeatherInfo'] }
 	})
 		.then(response => response.json())
 		.catch(e => ({ error: e }))
@@ -55,16 +56,15 @@ export default async function CityWeatherInfo({ params }: { params: { city: stri
 		<div className='min-h-[100dvh] flex flex-col'>
 			<CustomHeader>
 				<HeaderTitle>
-					{/*<span className='flex justify-center gap-1'>*/}
-					{/*<Image src={PinMark} alt='Месторасположение' className='w-5 h-5' />*/}
+					{/*<span className='flex justify-center gap-2'>*/}
+					{/*<Image src={PinMark} alt='Месторасположение' className='w-5 h-5 opacity-60 dark:invert' />*/}
 					{data.location.name}
 					{/*</span>*/}
 				</HeaderTitle>
 			</CustomHeader>
 			<main className='w-screen flex-1'>
+				<UpdateButton dopClass='animate-blur-animation' lastUpdate={data.current.last_updated} />
 				<DayWeatherInfo data={data} day={params.city[1]} />
-				<span
-					className='flex text-sm opacity-30 w-screen justify-center mt-10'>Обновлено: {data.current.last_updated}</span>
 			</main>
 		</div>
 	)

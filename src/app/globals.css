@@ -205,3 +205,15 @@ body {
 .text-wrap-balance {
     text-wrap: balance;
 }
+
+.hide-scrolllbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrolllbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+

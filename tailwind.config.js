@@ -86,7 +86,7 @@ module.exports = {
 					to: { translate: '0 0', opacity: 1 }
 				},
 				'blur-effect-kf': {
-					from: { filter: 'blur(15px)', opacity: 0.4 },
+					from: { filter: 'blur(20px)', opacity: 0.4 },
 					to: { filter: 'blur(0)', opacity: 1 }
 				},
 				'sunshine-effect-kf': {
