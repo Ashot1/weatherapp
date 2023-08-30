@@ -26,8 +26,8 @@ export async function generateMetadata({
 	params: { city: string[] }
 }): Promise<Metadata> {
 	const city = await getWeather(params.city[0].replace('_', ',')),
-		date = params.city[1] === 'current' ? 'сегодня' : params.city[1],
-		FormatedDate = params.city[1].replace('_', ' ').replace('!', ':')
+		FormatedDate = params.city[1].replace('_', ' ').replace('!', ':'),
+		date = params.city[1] === 'current' ? 'сегодня' : FormatedDate
 
 	let Icon = ''
 
@@ -48,8 +48,9 @@ export async function generateMetadata({
 	}
 
 	if (city?.location?.name) {
-		const description = `Актуальная погода в ${city.location.name} на ${FormatedDate}`
-		const icon = date === 'сегодня' ? city.current.condition.icon : Icon
+		const description = `Актуальная погода в ${city.location.name} на ${date}`
+		const icon =
+			date === 'сегодня' ? `https:${city.current.condition.icon}` : Icon
 
 		return {
 			title: city.location.name,
