@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import DayWeatherInfo from '@/components/module/DayWeatherInfo'
 import { WeatherData } from '@/lib/types'
 import UpdateButton from '@/components/entity/UpdateButton'
+import ScrollStateBar from '@/components/ui/ScrollStateBar'
 
 const getWeather = async (city: string) => {
 	const apiKey = process.env.WEATHER_API_KEY
@@ -41,7 +42,7 @@ export async function generateMetadata({
 				(item) => item.time === FormatedDate
 			)
 			if (findHour) {
-				Icon = findHour.condition.icon
+				Icon = `https:${findHour.condition.icon}`
 			}
 		}
 	}
@@ -90,6 +91,7 @@ export default async function CityWeatherInfo({
 
 	return (
 		<div className="min-h-[100dvh] flex flex-col">
+			<ScrollStateBar />
 			<CustomHeader>
 				<HeaderTitle>{data.location.name}</HeaderTitle>
 			</CustomHeader>

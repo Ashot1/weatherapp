@@ -18,9 +18,9 @@ const SecondaryWeatherInfo: FC<{
 			<Button asChild variant="secondary">
 				<Link
 					href={`/weather/${city}/current`}
-					className="mt-10 opacity-80 text-xs 1024p:text-sm"
+					className="mt-10 opacity-80 text-xs"
 				>
-					Вернуть текущее время
+					Прогноз на текущее время
 				</Link>
 			</Button>
 		</div>
