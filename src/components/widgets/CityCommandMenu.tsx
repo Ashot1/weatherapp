@@ -52,7 +52,7 @@ const CityCommandMenu: FC<{ classWrapper?: string }> = ({ classWrapper }) => {
 		[InputControl, setInputControl] = useState('')
 
 	const FavoriteListRender = async () => {
-		// type = 'Title|lat,lot;Title|lat,lot;'
+		// type = 'Title|lat,lot;'
 
 		const favoriteCities = localStorage.getItem('favorite')
 		if (!favoriteCities) {

@@ -18,7 +18,7 @@ module.exports = {
 		},
 		extend: {
 			transitionDelay: {
-				'2000': '2000ms'
+				2000: '2000ms'
 			},
 			screens: {
 				'300p': '340px',
@@ -86,7 +86,13 @@ module.exports = {
 					to: { translate: '0 0', opacity: 1 }
 				},
 				'blur-effect-kf': {
-					from: { filter: 'blur(20px)', opacity: 0.4 },
+					from: {
+						filter: 'blur(20px)',
+						opacity: 0.3,
+						overflowX: 'hidden',
+						backfaceVisibility: 'hidden',
+						transform: 'translate3d(0, 0, 0) translateZ(0)'
+					},
 					to: { filter: 'blur(0)', opacity: 1 }
 				},
 				'sunshine-effect-kf': {
@@ -109,7 +115,7 @@ module.exports = {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'text-appearance': 'appearance-kf 1.5s ease-out',
 				'top-appearance-moving': 'top-appearance-moving-kf 1s ease-out',
-				'blur-animation': 'blur-effect-kf 0.8s ease-out',
+				'blur-animation': 'blur-effect-kf 1.2s ease-in',
 				'sunshine-effect': 'sunshine-effect-kf 2s infinite',
 				'left-cloud-effect': 'left-cloud-effect-kf 6s infinite',
 				'right-cloud-effect': 'right-cloud-effect-kf 10s infinite'

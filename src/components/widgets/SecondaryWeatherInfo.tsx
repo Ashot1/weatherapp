@@ -15,7 +15,7 @@ const SecondaryWeatherInfo: FC<{
 				Для прокрутки колесиком мыши необходимо зажать shift
 			</p>
 			<TimeCarousel data={data} currentTime={currentTime} city={city} />
-			<Button asChild variant="secondary">
+			<Button asChild variant="default">
 				<Link
 					href={`/weather/${city}/current`}
 					className="mt-10 opacity-80 text-xs"

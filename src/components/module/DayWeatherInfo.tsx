@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { WeatherData } from '@/lib/types'
 import MainWeatherInfo from '@/components/widgets/MainWeatherInfo'
 import SecondaryWeatherInfo from '@/components/widgets/SecondaryWeatherInfo'
-import NavigateToCurrentWeather from '@/components/entity/NavigateToCurrentWeather'
+import NavigateToCurrentWeather from '@/components/redirect/NavigateToCurrentWeather'
 import OtherDays from '@/components/widgets/OtherDays'
 
 const DayWeatherInfo: FC<{ data: WeatherData; day: string; city: string }> = ({
