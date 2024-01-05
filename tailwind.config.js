@@ -87,7 +87,7 @@ module.exports = {
 				},
 				'blur-effect-kf': {
 					from: {
-						filter: 'blur(20px)',
+						filter: 'blur(10px)',
 						opacity: 0.3,
 						overflowX: 'hidden',
 						backfaceVisibility: 'hidden',
@@ -115,7 +115,7 @@ module.exports = {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'text-appearance': 'appearance-kf 1.5s ease-out',
 				'top-appearance-moving': 'top-appearance-moving-kf 1s ease-out',
-				'blur-animation': 'blur-effect-kf 1.2s ease-in',
+				'blur-animation': 'blur-effect-kf 1s ease-in',
 				'sunshine-effect': 'sunshine-effect-kf 2s infinite',
 				'left-cloud-effect': 'left-cloud-effect-kf 6s infinite',
 				'right-cloud-effect': 'right-cloud-effect-kf 10s infinite'

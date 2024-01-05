@@ -9,10 +9,7 @@ const getWeather = async (city: string) => {
 	const apiKey = process.env.WEATHER_API_KEY
 
 	const result: WeatherData = await fetch(
-		`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=yes&alerts=no&lang=ru`,
-		{
-			next: { revalidate: 1800, tags: ['CityWeatherInfo'] }
-		}
+		`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=yes&alerts=no&lang=ru`
 	)
 		.then((response) => response.json())
 		.catch((e) => ({ error: e }))
