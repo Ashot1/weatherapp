@@ -2,7 +2,6 @@ import CustomHeader, { HeaderTitle } from '@/components/module/CustomHeader'
 import { Metadata } from 'next'
 import DayWeatherInfo from '@/components/module/DayWeatherInfo'
 import { WeatherData } from '@/lib/types'
-import UpdateButton from '@/components/entity/UpdateButton'
 import ScrollStateBar from '@/components/ui/ScrollStateBar'
 
 const getWeather = async (city: string) => {
@@ -94,10 +93,10 @@ export default async function CityWeatherInfo({
 				<HeaderTitle>{data.location.name}</HeaderTitle>
 			</CustomHeader>
 			<main className="w-screen flex-1">
-				<UpdateButton
+				{/*				<UpdateButton
 					dopClass="animate-blur-animation"
 					lastUpdate={data.current.last_updated}
-				/>
+				/>*/}
 				<DayWeatherInfo
 					data={data}
 					day={params.city[1]}
