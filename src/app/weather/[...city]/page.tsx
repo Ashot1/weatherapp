@@ -8,7 +8,8 @@ const getWeather = async (city: string) => {
 	const apiKey = process.env.WEATHER_API_KEY
 
 	const result: WeatherData = await fetch(
-		`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=yes&alerts=no&lang=ru`
+		`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=yes&alerts=no&lang=ru`,
+        {cache: 'no-store'}
 	)
 		.then((response) => response.json())
 		.catch((e) => ({ error: e }))
