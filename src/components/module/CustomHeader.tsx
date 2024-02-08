@@ -8,7 +8,7 @@ const CustomHeader: FC<{
 	backButtonLink?: string
 }> = ({ children, backButtonLink }) => {
 	return (
-		<header className="w-screen h-[60px] flex justify-center relative">
+		<header className="w-dvw h-[60px] flex justify-center relative">
 			<div className="max-w-[1100px] w-[90%] 768p:w-[70%] flex h-[100%] items-center">
 				<nav className="w-[20%] -mt-[2px] justify-center flex items-center">
 					<BackButton backButtonLink={backButtonLink} />
